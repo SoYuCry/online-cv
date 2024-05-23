@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册返佣介绍</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #333;
+            text-align: center;
+        }
+
+        p, ul {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .highlight {
+            color: #d9534f;
+            font-weight: bold;
+        }
+
+        .cta {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .cta button {
+            padding: 15px 30px;
+            font-size: 20px;
+            color: #fff;
+            background-color: #5cb85c;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .cta button:hover {
+            background-color: #4cae4c;
+        }
+        .bold-large {
+            font-weight: bold;
+            font-size: 23px;
+        }
+        .no-highlight {
+            color: #a7a2a2;
+            /* font-weight: bold; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>为什么要选择我们的返佣计划？</h1>
+        <p><span class="bold-large">如果没有人手动返佣，您实际上是在“撒钱”给交易所。</span> 通过走我们的返佣链接，您将获得更多返佣：</p>
+        <ul>
+            <li>合约返佣 <span class="highlight">40%</span>，其中 <span class="highlight">10%</span> 自动返，<span class="highlight">30%</span> 永久返给我。</li>
+            <li>现货返佣 <span class="highlight">45%</span>，其中 <span class="highlight">20%</span> 自动返，<span class="highlight">25%</span> 永久返给我。</li>
+        </ul>
+        <p><span class="no-highlight">（一个月后，合约 10% 的自动返消失,其余不变。）</span></p>
+
+        <p><span class="bold-large">我会每两周，把到我这里的返佣，通过UID打到您账户。</span>您共计拿 <span class="highlight">38%</span> 的合约返，<span class="highlight">43%</span> 的现货返，我吃 <span class="highlight">2%</span> 的手动返劳务费。</p>
+        <p>普通人就算返给自己的小号，也顶多 <span class="highlight">20%</span>，而量大的，我甚至可以全返。</p>
+        <p>相当于，我们互利共赢割 BN，您省了手续费，我赚了劳务费。</p>
+        <p>统计下来：</p>
+        <ul>
+            <li><span class="bold-large">散户一周省一顿海底捞</span></li>
+            <li><span class="bold-large">大户一个月省一个iPhone</span></li>
+        </ul>
+        <div class="cta">
+            <button onclick="nextStep()">轻松3步，享受返佣福利！</button>
+        </div>
+    </div>
+    <script>
+        function nextStep() {
+            window.location.href = 'step2.html';
+        }
+    </script>
+</body>
+</html>

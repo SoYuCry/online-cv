@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>输入UID和微信号</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #333;
+            text-align: center;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+
+        .cta {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .cta button {
+            padding: 15px 30px;
+            font-size: 20px;
+            color: #fff;
+            background-color: #5cb85c;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .cta button:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>输入您的UID和微信号</h1>
+        <p>请输入您的UID和微信号，返佣发放进度将每两周在微信朋友圈里公布。</p>
+        <form id="uidForm">
+            <div class="form-group">
+                <label for="uid">UID：</label>
+                <input type="text" id="uid" name="uid" required>
+            </div>
+            <div class="form-group">
+                <label for="wechat">微信号：</label>
+                <input type="text" id="wechat" name="wechat" required>
+            </div>
+            <div class="cta">
+                <button type="submit">提交</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.getElementById('uidForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const uid = document.getElementById('uid').value;
+            const wechat = document.getElementById('wechat').value;
+            const message = `UID: ${uid}, 微信号: ${wechat}`;
+            
+            fetch('/send-telegram', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ message: message })
+            }).then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    window.location.href = 'step5.html';
+                } else {
+                    console.error('Error:', data.error);
+                    alert('提交失败，请重试。');
+                }
+            }).catch(error => {
+                console.error('Fetch error:', error);
+                alert('提交失败，请重试。');
+            });
+        });
+    </script>
+</body>
+</html>

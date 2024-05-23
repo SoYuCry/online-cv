@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册链接与教程</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #333;
+            text-align: center;
+        }
+
+        p, ul {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .highlight {
+            color: #d9534f;
+            font-weight: bold;
+        }
+
+        .cta {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .cta button {
+            padding: 15px 30px;
+            font-size: 20px;
+            color: #fff;
+            background-color: #5cb85c;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .cta button:hover {
+            background-color: #4cae4c;
+        }
+
+        .bold-large {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            max-width: 30%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+        }
+        .no-highlight {
+            color: #a7a2a2;
+            /* font-weight: bold; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Step 2: 注册新账户</h1>
+        <p><span class="bold-large">点击以下链接进行注册，并完成 KYC（身份验证）：</span></p>
+        <p><a href="https://www.suitechsui.club/zh-CN/join?ref=C0B4KTWT" class="highlight">未开梯子请访问</a></p>
+        <p><a href="https://accounts.binance.com/register?ref=C0B4KTWT" class="highlight">开梯子请访问</a></p>
+        <p><span class="no-highlight">（推荐码：C0B4KTWT）</span></p>
+        <div class="image-container">
+            <img src="./image2.jpg" alt="现货自动绑定，合约推荐码不需要填">
+            <p>（合约自动绑定，不需要填）</p>
+        </div>
+        <div class="cta">
+            <button onclick="nextStep()">下一步</button>
+        </div>
+    </div>
+    <script>
+        function nextStep() {
+            window.location.href = 'step4.html';
+        }
+    </script>
+</body>
+</html>
